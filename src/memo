@@ -1,0 +1,13 @@
+movie-app-api
+
+//yts
+https://yts.mx/api
+
+//list_movies
+https://yts.mx/api/v2/list_movies.json
+
+//니꼬 list_movies
+https://yts-proxy.now.sh/list_movies.json
+
+//니꼬 movies_details
+https://yts-proxy.now.sh/movie_details.json(?movie_id=10)
