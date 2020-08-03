@@ -28,15 +28,25 @@ export default class App extends Component {
   render() {
     const { isLoading, movies } = this.state;
     return (
-      <div>
-        {isLoading
-          ? "Loading..."
-          : movies.map((m) => {
-              return (
-                <Movie title={m.title} year={m.year} summary={m.summary} />
-              );
-            })}
-      </div>
+      <section>
+        {isLoading ? (
+          <div>
+            <span>❤️Loading❤️</span>
+          </div>
+        ) : (
+          <div>
+            {movies.map((m) => (
+              <Movie
+                poster={m.medium_cover_image}
+                title={m.title}
+                year={m.year}
+                summary={m.summary}
+                genres={m.genres}
+              />
+            ))}
+          </div>
+        )}
+      </section>
     );
   }
 }
