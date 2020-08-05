@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import axios from "axios";
 import Movie from "./components/Movie";
+import axios from "axios";
+import "./css/App.css";
 
 export default class App extends Component {
   state = {
@@ -8,7 +9,7 @@ export default class App extends Component {
     movies: [],
   };
 
-  movieList = async () => {
+  MovieList = async () => {
     const {
       data: {
         data: { movies },
@@ -16,37 +17,44 @@ export default class App extends Component {
     } = await axios.get("https://yts-proxy.now.sh/list_movies.json");
 
     this.setState({
-      isLoading: false,
       movies: movies,
+      isLoading: false,
     });
   };
 
   componentDidMount() {
-    this.movieList();
+    this.MovieList();
   }
 
   render() {
     const { isLoading, movies } = this.state;
     return (
-      <section>
+      <section className="container">
         {isLoading ? (
-          <div>
-            <span>❤️Loading❤️</span>
+          <div className="loader">
+            <span className="loader_text">Loading...</span>
           </div>
         ) : (
-          <div>
-            {movies.map((m) => (
-              <Movie
-                poster={m.medium_cover_image}
-                title={m.title}
-                year={m.year}
-                summary={m.summary}
-                genres={m.genres}
-              />
-            ))}
+          <div className="movies">
+            {movies.map((m) => {
+              return (
+                <Movie
+                  key={m.id}
+                  id={m.id}
+                  year={m.year}
+                  title={m.title}
+                  summary={m.summary}
+                  poster={m.medium_cover_image}
+                  genres={m.genres}
+                />
+              );
+            })}
           </div>
         )}
       </section>
     );
   }
 }
+
+//로딩 중 띄웠다가 바로 웹페이지 전환 -> 영화리스트 : title, year, summary, poster
+//웹페이지 전환 전에 api 가져오기 -> axios
