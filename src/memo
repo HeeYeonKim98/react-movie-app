@@ -12,23 +12,3 @@ https://yts-proxy.now.sh/list_movies.json
 //니꼬 movies_details
 https://yts-proxy.now.sh/movie_details.json(?movie_id=10)
 
-
-import React from "react";
-
-const Movie = ({ poster, title, year, summary, genres }) => {
-  return (
-    <div className="movie">
-      <img src={poster} alt={title} title={title} />
-      <div>
-        <h2>{title}</h2>
-        <h5>{year}</h5>
-        <p>{summary.slice(0, 10)}...❣️</p>
-        <ul>
-          {genres.map((g) => (
-            <li>{g}</li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  );
-};
