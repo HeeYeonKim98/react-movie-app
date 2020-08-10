@@ -1,7 +1,7 @@
-react-movie-app
-===============
+# react-movie-app
 
-
+### Start
+  npm start
 
 ### References
 Nomad Coders, Clone coding : Movie rating web service, 2020
