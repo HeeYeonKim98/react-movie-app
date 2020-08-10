@@ -6,7 +6,10 @@ const Movie = ({ poster, title, year, genres, summary }) => {
   return (
     <div className="movie">
       <Link
-        to={{ pathname: "/detail", state: { title, year, genres, summary } }}
+        to={{
+          pathname: "/detail",
+          state: { poster, title, year, genres, summary },
+        }}
       >
         <img src={poster} alt={title} title={title} />
         <div className="movie_data">
