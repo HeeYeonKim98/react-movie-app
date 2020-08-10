@@ -7,17 +7,17 @@ export default class About extends Component {
   render() {
     return (
       <div className="about_container">
-        <span first-child>About</span>
+        <span first-child="true">About</span>
         <br />
         <br />
-        <span last-child>movie rating web-application</span>
+        <span last-child="true">movie rating web-application</span>
         <br />
         <br />
 
-        <span last-child>Developer | Hee Yeon.k</span>
+        <span last-child="true">Developer | Hee Yeon.k</span>
         <br />
 
-        <span last-child>
+        <span last-child="true">
           References | Nomad Coders, Clone coding : Movie rating web service
         </span>
       </div>
