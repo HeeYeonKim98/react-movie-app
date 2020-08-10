@@ -12,6 +12,6 @@ Nomad Coders, Clone coding : Movie rating web service, 2020
 
 
 ### Link
-*clone starter kit by Nomad Coders : <https://github.com/easysIT/do_it_clonecoding_movieapp>
+* clone starter kit by Nomad Coders : <https://github.com/easysIT/do_it_clonecoding_movieapp>
 
-*movie rating web-application by Hee Yeon. K : <https://>
+* movie rating web-application by Hee Yeon. K : <https://>
