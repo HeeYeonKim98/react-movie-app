@@ -11,6 +11,7 @@ export default class Detail extends Component {
   }
 
   render() {
+    console.log(this.props);
     const { location } = this.props;
     console.log(location);
 
