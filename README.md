@@ -2,7 +2,9 @@
 
 ### Start
 
-    npm start
+    $ npm install
+
+    $ npm start
 
 ### References
 
